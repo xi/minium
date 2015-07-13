@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Minium",
-  "description": "Minimal Vimium",
+  "description": "Minimal Vimium; only implementing few keybindings",
   "version": "1.0",
 
   "content_scripts": [{
