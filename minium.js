@@ -1,8 +1,6 @@
 (function() {
 	'use strict';
 
-	console.log('minium loaded');
-
 	var mode = null;
 	var modeTimeoutID;
 	var M_BOTTOM = 1;
