@@ -28,6 +28,10 @@
 			return;
 		}
 
+		if (event.altKey || event.ctrlKey) {
+			return;
+		}
+
 		if (event.keyCode === 71) {
 			if (event.shiftKey) {
 				scrollable.scrollTop = scrollable.scrollHeight;
