@@ -21,6 +21,9 @@
 
 	document.addEventListener('keydown', function(event) {
 		var scrollable = document.body;
+		if (scrollable.scrollHeight <= scrollable.parentNode.scrollHeight) {
+			scrollable = scrollable.parentNode;
+		}
 
 		if (event.target.tagName === 'INPUT' ||
 				event.target.tagName === 'TEXTAREA' ||
