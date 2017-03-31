@@ -21,6 +21,9 @@
 
 	document.addEventListener('keydown', function(event) {
 		var scrollable = document.body;
+		if (!scrollable) {
+			return;
+		}
 		if (scrollable.scrollHeight <= scrollable.parentNode.scrollHeight) {
 			scrollable = scrollable.parentNode;
 		}
