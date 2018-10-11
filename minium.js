@@ -50,17 +50,11 @@
 				setMode(M_BOTTOM);
 			}
 			event.preventDefault();
-		} else if (event.keyCode === 72) {
-			scrollable.scrollLeft -= 40;
-			event.preventDefault();
 		} else if (event.keyCode === 74) {
 			scrollable.scrollTop += 40;
 			event.preventDefault();
 		} else if (event.keyCode === 75) {
 			scrollable.scrollTop -= 40;
-			event.preventDefault();
-		} else if (event.keyCode === 76) {
-			scrollable.scrollLeft += 40;
 			event.preventDefault();
 		}
 	});
