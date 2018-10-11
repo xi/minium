@@ -19,13 +19,15 @@
 		mode = _mode;
 	};
 
+	var isScrollable = function(element) {
+		var overflow = getComputedStyle(element).overflowY;
+		return ['auto', 'scroll'].includes(overflow);
+	};
+
 	document.addEventListener('keydown', function(event) {
-		var scrollable = document.body;
-		if (!scrollable) {
-			return;
-		}
-		if (scrollable.scrollHeight <= scrollable.parentNode.scrollHeight) {
-			scrollable = scrollable.parentNode;
+		var scrollable = event.target;
+		while (!isScrollable(scrollable) && scrollable.parentElement) {
+			scrollable = scrollable.parentElement;
 		}
 
 		if (event.target.tagName === 'INPUT' ||
