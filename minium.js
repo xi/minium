@@ -58,11 +58,4 @@
 			event.preventDefault();
 		}
 	});
-
-	// disable auto scroll
-	document.addEventListener('mousedown', function(event) {
-		if (event.button === 1) {
-			event.preventDefault();
-		}
-	});
 })();
